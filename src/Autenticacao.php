@@ -28,7 +28,7 @@ class Autenticacao extends CSController{
             $response = $this->http->post('authenticate', array(
                 'json' => [
                     'name' => $name,
-                    'numero' => $password,
+                    'password' => $password,
                 ]
             ));
 

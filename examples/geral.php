@@ -13,13 +13,19 @@ $password = "";
 
 //--
 
-$autenticao = new \CS\Autenticacao();
-$totalGarantido = new \CS\TotalGarantido();
+$csConfig = [];
+        
+$csConfig['base_uri'] = CS\Core\CSHttp::BASE_URL_HOMOLOG;
+
+$autenticao = new \CS\Autenticacao($csConfig);
+$totalGarantido = new \CS\TotalGarantido($csConfig);
 
 $token = null;
 
 try{
     $token = $autenticao->gerarToken($name, $password);
+    
+    CS\Helper\CSHelper::dump($token);
     
     $totalGarantido->setToken($token);
     
@@ -220,5 +226,5 @@ try{
         ]
     ]);
 } catch (Exception $ex) {
-
+    CS\Helper\CSHelper::dump($ex->getMessage());
 }
