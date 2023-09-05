@@ -24,12 +24,14 @@ class CSException extends Exception{
     
     public static function fromObjectMessage($message, $code, $previous = null){
         
-        if(is_array($message)){
+        if(is_object($message)){
             
-            $newMessageString = [];
+            $newMessageString = [
+                $message->Message
+            ];
             
-            foreach($message as $error){
-                $newMessageString[] =  $error;
+            foreach($message->ModelState as $ModelStateKey => $ModelStateValue){
+                $newMessageString[] = $ModelStateKey . ": " . implode(', ', $ModelStateValue);
             }                           
             
             return new CSException( new Exception(implode("\n", $newMessageString), $code, $previous) );     

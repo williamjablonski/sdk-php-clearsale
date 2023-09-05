@@ -41,8 +41,8 @@ class TotalGarantido extends CSController{
             
             $bodyDecoded = json_decode($body);
             
-            if(isset($bodyDecoded->msgs)){
-                throw CSException::fromObjectMessage($bodyDecoded->msgs, $ex->getCode(), $ex->getPrevious());
+            if(isset($bodyDecoded->ModelState)){
+                throw CSException::fromObjectMessage($bodyDecoded, $ex->getCode(), $ex->getPrevious());
             }
             
             throw CSException::fromObjectMessage('[ServerException] ' . $ex->getMessage(), $ex->getCode(), $ex->getPrevious());
@@ -53,8 +53,8 @@ class TotalGarantido extends CSController{
             
             $bodyDecoded = json_decode($body);
             
-            if(isset($bodyDecoded->msgs)){
-                throw CSException::fromObjectMessage($bodyDecoded->msgs, $ex->getCode(), $ex->getPrevious());
+            if(isset($bodyDecoded->ModelState)){
+                throw CSException::fromObjectMessage($bodyDecoded, $ex->getCode(), $ex->getPrevious());
             }
             
             throw CSException::fromObjectMessage('[ClientException] ' . $ex->getMessage(), $ex->getCode(), $ex->getPrevious());
@@ -65,10 +65,8 @@ class TotalGarantido extends CSController{
             
             $bodyDecoded = json_decode($body);
             
-            if(isset($bodyDecoded->msgs)){
-                
-                throw CSException::fromObjectMessage($bodyDecoded->msgs, $ex->getCode(), $ex->getPrevious());
-                
+            if(isset($bodyDecoded->ModelState)){
+                throw CSException::fromObjectMessage($bodyDecoded, $ex->getCode(), $ex->getPrevious());
             }
             
             throw CSException::fromObjectMessage('[BadResponseException] ' . $ex->getMessage(), $ex->getCode(), $ex->getPrevious());
@@ -97,8 +95,8 @@ class TotalGarantido extends CSController{
             
             $bodyDecoded = json_decode($body);
             
-            if(isset($bodyDecoded->msgs)){
-                throw CSException::fromObjectMessage($bodyDecoded->msgs, $ex->getCode(), $ex->getPrevious());
+            if(isset($bodyDecoded->ModelState)){
+                throw CSException::fromObjectMessage($bodyDecoded, $ex->getCode(), $ex->getPrevious());
             }
             
             throw CSException::fromObjectMessage('[ServerException] ' . $ex->getMessage(), $ex->getCode(), $ex->getPrevious());
@@ -109,8 +107,8 @@ class TotalGarantido extends CSController{
             
             $bodyDecoded = json_decode($body);
             
-            if(isset($bodyDecoded->msgs)){
-                throw CSException::fromObjectMessage($bodyDecoded->msgs, $ex->getCode(), $ex->getPrevious());
+            if(isset($bodyDecoded->ModelState)){
+                throw CSException::fromObjectMessage($bodyDecoded, $ex->getCode(), $ex->getPrevious());
             }
             
             throw CSException::fromObjectMessage('[ClientException] ' . $ex->getMessage(), $ex->getCode(), $ex->getPrevious());
@@ -121,10 +119,8 @@ class TotalGarantido extends CSController{
             
             $bodyDecoded = json_decode($body);
             
-            if(isset($bodyDecoded->msgs)){
-                
-                throw CSException::fromObjectMessage($bodyDecoded->msgs, $ex->getCode(), $ex->getPrevious());
-                
+            if(isset($bodyDecoded->ModelState)){
+                throw CSException::fromObjectMessage($bodyDecoded, $ex->getCode(), $ex->getPrevious());
             }
             
             throw CSException::fromObjectMessage('[BadResponseException] ' . $ex->getMessage(), $ex->getCode(), $ex->getPrevious());
