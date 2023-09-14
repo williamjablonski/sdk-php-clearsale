@@ -81,6 +81,7 @@ class TotalGarantido extends CSController{
             $response = $this->http->get(sprintf('orders/%s/status', $orderId), array(
                 "headers" => [
                     "Authorization" => 'Bearer ' . $this->getToken()->getToken(),
+                    "Accept" => "application/json"
                 ]
             ));
 
