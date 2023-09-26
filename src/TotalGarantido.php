@@ -130,4 +130,59 @@ class TotalGarantido extends CSController{
         }
     }
     
+    public function atualizaStatus($orderId, array $data){
+        try{
+            $response = $this->http->put(sprintf('orders/%s/status', $orderId), array(
+                "headers" => [
+                    "Authorization" => 'Bearer ' . $this->getToken()->getToken(),
+                    "Accept" => "application/json"
+                ],
+                "json" => $data,
+            ));
+
+            $body = (string)$response->getBody();
+                        
+            return json_decode($body);
+            
+        } catch (ServerException $ex) {
+            
+            $body = (string)$ex->getResponse()->getBody();
+            
+            $bodyDecoded = json_decode($body);
+            
+            if(isset($bodyDecoded->ModelState)){
+                throw CSException::fromObjectMessage($bodyDecoded, $ex->getCode(), $ex->getPrevious());
+            }
+            
+            throw CSException::fromObjectMessage('[ServerException] ' . $ex->getMessage(), $ex->getCode(), $ex->getPrevious());
+                        
+        } catch (ClientException $ex) {
+            
+            $body = (string)$ex->getResponse()->getBody();
+            
+            $bodyDecoded = json_decode($body);
+            
+            if(isset($bodyDecoded->ModelState)){
+                throw CSException::fromObjectMessage($bodyDecoded, $ex->getCode(), $ex->getPrevious());
+            }
+            
+            throw CSException::fromObjectMessage('[ClientException] ' . $ex->getMessage(), $ex->getCode(), $ex->getPrevious());
+            
+        } catch (BadResponseException $ex) {
+            
+            $body = (string)$ex->getResponse()->getBody();
+            
+            $bodyDecoded = json_decode($body);
+            
+            if(isset($bodyDecoded->ModelState)){
+                throw CSException::fromObjectMessage($bodyDecoded, $ex->getCode(), $ex->getPrevious());
+            }
+            
+            throw CSException::fromObjectMessage('[BadResponseException] ' . $ex->getMessage(), $ex->getCode(), $ex->getPrevious());
+            
+        } catch (Exception $ex) {
+            throw new CSException($ex);
+        }
+    }
+    
 }
