@@ -13,7 +13,7 @@ use CS\Entity\CSToken;
 /**
  * DesCSiption of MSController
  *
- * @author weslley
+ * @author william
  */
 class CSController extends CSHttp{
     protected CSToken $token;
