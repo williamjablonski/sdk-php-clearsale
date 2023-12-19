@@ -1,15 +1,15 @@
 {
-    "name": "ceresaconsultoria/sdk-php-clearsale",
+    "name": "williamjablonski/sdk-php-clearsale",
     "description": "SDK PHP >=7.4 APIs ClearSale",
-    "keywords": ["api", "library", "psr-4", "clearsale", "sdk"],
-    "homepage": "https://github.com/ceresaconsultoria/sdk-php-clearsale",
+    "keywords": ["api", "library", "psr-4", "clearsale", "sdk", "flexy-clearsale"],
+    "homepage": "https://github.com/williamjablonski/sdk-php-clearsale",
     "type": "library",
-    "license": "proprietary",
+    "license": "MIT - Open source",
     "authors": [
         {
-            "name": "Weslley Ceresa",
-            "email": "ceresaconsultoria@gmail.com",
-            "homepage": "https://www.mobilestores.app"
+            "name": "William Melchior Jablonski",
+            "email": "william.jablonski@gmail.com",
+            "homepage": "https://www.q4sure.co"
         }
     ],
     "require": {
