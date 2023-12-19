@@ -19,7 +19,7 @@ use GuzzleHttp\Exception\ServerException;
 /**
  * DesCSiption of Autorizacao
  *
- * @author weslley
+ * @author william
  */
 class Autenticacao extends CSController{
     
