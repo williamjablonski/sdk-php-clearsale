@@ -33,7 +33,7 @@ try{
         "code" => "ORDER_EXAMPLE_2_0_1",
         "sessionID" => "SessionIDValue",
         "date" => "2017-03-22T13:38:59.9894222",
-        "email" => "email@email.com.br",
+        "email" => "william.jablonski@flexy.com.br",
         "b2bB2c" => "B2C",
         "itemValue" => 10,
         "totalValue" => 15,
@@ -63,7 +63,7 @@ try{
             "lastDateChangeMobilePhone" => "2015-06-04T12:05:00",
             "lastDateInsertedAddress" => "2015-07-05T15:25:00",
             "purchaseLogged" => false,
-            "email" => "email@pemail.com.br",
+            "email" => "william.jablonski@flexy.com.br",
             "login" => "SocialNetworkLogin"
         ],
         "socialNetwork" => [
@@ -78,7 +78,7 @@ try{
             "secondaryDocument" => "12345678",
             "name" => "Complete Client Name",
             "birthDate" => "1990-01-10T00:00:00.000",
-            "email" => "email@email.com.br",
+            "email" => "william.jablonski@flexy.com.br",
             "gender" => "M",
             "address" => [
                 "street" => "Street name example",
@@ -108,7 +108,7 @@ try{
             "secondaryDocument" => "12345678",
             "name" => "Complete Client Name",
             "birthDate" => "1990-01-10T00:00:00.000",
-            "email" => "email@email.com.br",
+            "email" => "william.jablonski@flexy.com.br",
             "gender" => "M",
             "address" => [
                 "street" => "Street name example",
@@ -163,7 +163,7 @@ try{
                     "additionalInformation" => "Additional information example",
                     "county" => "County Example",
                     "city" => "City Example",
-                    "state" => "SP",
+                    "state" => "SC",
                     "zipcode" => "12345678",
                     "country" => "Brasil",
                     "reference" => "Address reference example"
