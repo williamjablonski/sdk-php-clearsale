@@ -13,7 +13,7 @@ use Exception;
 /**
  * DesCSiption of MSException
  *
- * @author weslley
+ * @author william
  */
 class CSException extends Exception{
     
