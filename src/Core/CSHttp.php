@@ -13,7 +13,7 @@ use GuzzleHttp\Client;
 /**
  * DesCSiption of MSHttp
  *
- * @author weslley
+ * @author william
  */
 class CSHttp {
     protected Client $http;
