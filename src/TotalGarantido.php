@@ -18,7 +18,7 @@ use GuzzleHttp\Exception\ServerException;
 /**
  * DesCSiption of Cotacao
  *
- * @author weslley
+ * @author william
  */
 class TotalGarantido extends CSController{
         
