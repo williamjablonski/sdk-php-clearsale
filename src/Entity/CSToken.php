@@ -11,7 +11,7 @@ namespace CS\Entity;
 /**
  * DesCSiption of CSToken
  *
- * @author weslley
+ * @author william
  */
 class CSToken {
     public $token;
