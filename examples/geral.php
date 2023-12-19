@@ -81,15 +81,15 @@ try{
             "email" => "william.jablonski@flexy.com.br",
             "gender" => "M",
             "address" => [
-                "street" => "Street name example",
-                "number" => "100",
-                "additionalInformation" => "Additional information example",
-                "county" => "County Example",
-                "city" => "City Example",
-                "state" => "SP",
+                "street" => "SC-401",
+                "number" => "8600",
+                "additionalInformation" => "Centro Empresarial Corporate Park, Bloco 3 SL 101",
+                "county" => "Brasil",
+                "city" => "Florianópolis",
+                "state" => "SC",
                 "zipcode" => "12345678",
                 "country" => "Brasil",
-                "reference" => "Address reference example"
+                "reference" => "Flexy - Plataforma de E-commerce, Bloco 3 SL 101"
             ],
             "phones" => [
                 [
